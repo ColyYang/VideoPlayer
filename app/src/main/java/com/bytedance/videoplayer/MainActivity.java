@@ -65,12 +65,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
         handler = new FHandler(this);
         playtime = findViewById(R.id.playTime);
-        playbtn.setText("Pause");
-
 
         //实现横竖屏切换
         changebtn.setOnClickListener(new View.OnClickListener() {
@@ -130,7 +126,6 @@ public class MainActivity extends AppCompatActivity {
 
     //实现时间更新
     public void updateTime() {
-        if(playbtn.getText().equals("Pause")){
             long currentTime = ijkPlayer.getCurrentPosition();
             long totalTime = ijkPlayer.getDuration();
             if(totalTime != 0){ //时间更新
@@ -139,7 +134,6 @@ public class MainActivity extends AppCompatActivity {
                 Integer currentTime_s = (int)(currentTime/1000);
                 playtime.setText(currentTime_s.toString()+"s");
             }
-        }
     }
 
     private static class FHandler extends Handler {
