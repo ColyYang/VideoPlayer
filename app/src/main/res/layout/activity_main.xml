@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.bytedance.videoplayer.VideoPlayerIJK
+        android:id="@+id/Player"
+        android:layout_width="match_parent"
+        android:layout_height="240dp" />
+
+    <SeekBar
+        android:id="@+id/seekB"
+        android:max = "100"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        >
+    </SeekBar>
+    <TextView
+        android:id="@+id/playTime"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text ="0s"
+        android:textColor="#000000"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Play" />
+
+        <Button
+            android:id="@+id/buttonChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Change View" />
+    </LinearLayout>
+
+</LinearLayout>
